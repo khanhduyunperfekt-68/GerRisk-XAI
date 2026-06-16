@@ -1,4 +1,4 @@
-# 🇩🇪 GerRisk-XAI: Credit Risk Prediction & Explainable Analytics Dashboard
+# GerRisk-XAI: Credit Risk Prediction & Explainable Analytics Dashboard
 
 ## Overview
 
@@ -126,6 +126,8 @@ The Streamlit dashboard contains three main modules:
 
 ### Executive Overview
 
+![Overview](assets/overview.png)
+
 Provides a portfolio-level view of:
 
 * Customer statistics
@@ -136,6 +138,8 @@ Provides a portfolio-level view of:
 * Age distribution
 
 ### Customer Risk Assessment
+
+![Risk Assessment](assets/risk_assessment.png)
 
 Allows users to:
 
@@ -149,6 +153,8 @@ Allows users to:
   * High Risk
 
 ### Model Insights
+
+![Insights](assets/model_insights.png)
 
 Provides model transparency through:
 
