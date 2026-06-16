@@ -154,7 +154,7 @@ Allows users to:
 
 ### Model Insights
 
-![Insights](assets/model_insights.png)
+![Insights](assets/models_insights.png)
 
 Provides model transparency through:
 
