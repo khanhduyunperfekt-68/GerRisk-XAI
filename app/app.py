@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
+from pathlib import Path
 
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -11,20 +12,29 @@ st.set_page_config(
     page_icon="🇩🇪",
     layout="wide"
 )
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+MODEL_PATH = (
+    BASE_DIR
+    / "models"
+    / "credit_risk_model.pkl"
+)
+
+DATA_PATH = (
+    BASE_DIR
+    / "data"
+    / "german_credit.csv"
+)
 
 @st.cache_resource
 def load_model():
-    return joblib.load(
-        "models/credit_risk_model.pkl"
-    )
+    return joblib.load(MODEL_PATH)
 
 model = load_model()
 
 @st.cache_data
 def load_data():
-    return pd.read_csv(
-        "data/german_credit.csv"
-    )
+    return pd.read_csv(DATA_PATH)
 
 
 df = load_data()
@@ -598,7 +608,7 @@ with tab3:
             """
         )
     st.subheader(
-        "💡 Business Interpretation"
+        " Business Interpretation"
     )
 
     st.success(
